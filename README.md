@@ -26,6 +26,8 @@
 
 [Nest](https://github.com/nestjs/nest) notifications service built w/ Kafka
 
+[Ignite Lab Project](https://www.rocketseat.com.br/)
+
 ## Installation
 
 ```bash
