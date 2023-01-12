@@ -8,6 +8,7 @@ export function makeNotification(override: Override = {}){
         category: 'social',
         content: new Content('Nova solicitação de amizade'),
         recipientId:'recipient-1',
+        recipientEmail: 'user@domain.com',
         ...override
     }) 
 }

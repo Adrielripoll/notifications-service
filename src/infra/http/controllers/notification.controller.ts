@@ -23,12 +23,13 @@ export class NotificationsController {
 
     @Post()
     async create(@Body() body: createNotificationDto){
-        const { recipientId, content, category } = body
+        const { recipientId, content, category, recipientEmail } = body
         
         const notification = await this.sendNotification.execute({
             recipientId,
             content,
-            category
+            category,
+            recipientEmail
         })
 
         return NotificationViewModel.toHTTP(notification)

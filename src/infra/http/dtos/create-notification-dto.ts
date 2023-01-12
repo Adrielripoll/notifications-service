@@ -1,4 +1,4 @@
-import { IsNotEmpty, IsUUID, Length } from "class-validator";
+import { IsEmail, IsNotEmpty, IsUUID, Length } from "class-validator";
 
 export class createNotificationDto {
     @IsNotEmpty()
@@ -11,4 +11,8 @@ export class createNotificationDto {
 
     @IsNotEmpty()
     category: string
+
+    @IsEmail()
+    @IsNotEmpty()
+    recipientEmail: string
 }

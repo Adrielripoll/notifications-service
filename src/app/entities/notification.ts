@@ -4,6 +4,7 @@ import { randomUUID } from "crypto"
 
 export interface INotification {
     recipientId: string
+    recipientEmail: string
     content: Content
     category: string
     readAt?: Date | null | undefined
@@ -30,6 +31,14 @@ export class Notification {
 
     public set recipientId(recipientId: string){
         this.props.recipientId = recipientId
+    }
+
+    public get recipientEmail(): string{
+        return this.props.recipientEmail
+    }
+
+    public set recipientEmail(recipientEmail: string){
+        this.props.recipientId = recipientEmail
     }
 
     public get content(): Content{

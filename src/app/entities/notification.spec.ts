@@ -8,6 +8,7 @@ describe('Notification', () => {
             content: new Content('Nova solicitação de amizade'),
             category: 'social',
             recipientId: randomUUID(),
+            recipientEmail: 'user@domain.com'
         })
 
         expect(notification).toBeTruthy()
